@@ -1,0 +1,17 @@
+name: Integración Continua - CI
+
+# Este workflow se ejecuta en cada push a la rama main
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # El workflow se ejecuta en un servidor Linux
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4  # Copia el código de tu repo al runner
+
+    - name: Simular validación de código
+      run: echo "Todo correcto. Validación simulada completada."
